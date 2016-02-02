@@ -157,6 +157,14 @@ class Manager
         return $this;
     }
 
+
+    public function matching($name, array $config = [])
+    {
+        $this->add($name, 'Search.Matching', $config);
+
+        return $this;
+    }
+
     /**
      * finder method
      *

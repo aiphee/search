@@ -17,6 +17,11 @@ class Value extends Base
             return;
         }
 
+        if($this->value() === '') {
+        	return;
+        }
+
+
         $this->query()->andWhere(function ($e) {
             return $e->in($this->field(), $this->value());
         });
